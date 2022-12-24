@@ -49,7 +49,16 @@ public class Rocket implements GameControlScene {
 	 * try replacing one of the calls to the constructor with a call to this
 	 * constructor.
 	 */
-
+	public Rocket() {
+		x = AsteroidsGame.WIDTH / 2; 
+		y = AsteroidsGame.HEIGHT / 2;
+		size = 10;
+		collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size);
+	}
+	public Rocket(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
 	@Override
 	public void draw(Graphics g) {
 		Graphics2D graphics2D = (Graphics2D) g;
